@@ -60,7 +60,7 @@ import { default as InputNumber } from './input-number'
 
 import { default as Layout } from './layout'
 
-// import { default as List } from './list'
+import { default as List } from './list'
 
 import { default as LocaleProvider } from './locale-provider'
 
@@ -203,6 +203,7 @@ const components = [
   Tooltip,
   Upload,
   Upload.Dragger,
+  List,
 ]
 
 const install = function (Vue) {
@@ -271,6 +272,7 @@ export {
   Timeline,
   Tooltip,
   Upload,
+  List,
 }
 
 export default {
