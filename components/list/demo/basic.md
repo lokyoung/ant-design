@@ -17,25 +17,27 @@ Basic list.
 <template>
   <a-list
     :itemLayout="horizontal"
-    :dataSource="data" />
+    :dataSource="data"
+    @renderItem="renderItem">
   </a-list>
 </template>
-```
 
-<!-- ````jsx
-ReactDOM.render(
-  <List
-    itemLayout="horizontal"
-    dataSource={data}
-    renderItem={item => (
-      <List.Item>
-        <List.Item.Meta
-          avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-          title={<a href="https://ant.design">{item.title}</a>}
-          description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-        />
-      </List.Item>
-    )}
-  />
-, mountNode);
-```` -->
+<script>
+export default {
+  data() {
+    return {
+      data: []
+    }
+  },
+  methods: {
+    renderItem(item) {
+      return (
+        <List.Item>
+          <Card title={item.title}>Card content</Card>
+        </List.Item>
+      )
+    }
+  }
+}
+</script>
+```
